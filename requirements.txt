@@ -1,0 +1,2 @@
+pygame==2.5.2  # For potential graphical interface
+numpy==1.26.3  # For array operations
