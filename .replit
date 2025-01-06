@@ -1,11 +1,11 @@
-run = "python3 -m http.server 8000"
+run = "sh -c 'command -v python3 || command -v python || echo \"Python not found\" && python -m http.server 8000'"
 entrypoint = "index.html"
 
 [nix]
 channel = "stable-22_11"
 
 [deployment]
-run = ["sh", "-c", "python3 -m http.server 8000"]
+run = ["sh", "-c", "command -v python3 || command -v python || echo \"Python not found\" && python -m http.server 8000"]
 deploymentTarget = "cloudrun"
 
 [gitHubImport]
