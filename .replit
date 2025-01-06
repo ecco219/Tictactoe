@@ -1,0 +1,22 @@
+run = "python -m http.server 8000"
+entrypoint = "index.html"
+
+[nix]
+channel = "stable-22_11"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", "README.md"]
+
+[languages]
+
+[languages.html]
+pattern = "**/*.html"
+
+[languages.html.languageServer]
+start = "vscode-html-language-server --stdio"
+
+[languages.javascript]
+pattern = "**/*.js"
+
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
