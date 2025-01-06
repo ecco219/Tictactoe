@@ -2,6 +2,10 @@
     deps = [
         pkgs.python310
         pkgs.python310Packages.http-server
+        pkgs.nodejs-16_x
+        pkgs.nodePackages.http-server
+        pkgs.python3
+        pkgs.python3Packages.pip
     ];
     env = {
         PYTHON_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
@@ -9,7 +13,9 @@
             pkgs.stdenv.cc.cc.lib
         ];
         PYTHONBIN = "${pkgs.python310}/bin/python3.10";
+        PYTHONBIN3 = "${pkgs.python3}/bin/python3";
         LANG = "en_US.UTF-8";
         STDERREDBIN = "${pkgs.stdenv.cc.cc}/bin/stderred";
+        NODEJS_VERSION = "16.x";
     };
 }
