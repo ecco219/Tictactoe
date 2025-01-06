@@ -1,4 +1,4 @@
-run = "python -m http.server 8000"
+run = "C:\\Users\\GENNO\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m http.server 8000"
 entrypoint = "index.html"
 
 [nix]
