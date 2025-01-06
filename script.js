@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cells = document.querySelectorAll('.cell');
     const statusDisplay = document.getElementById('status');
-    const resetButton = document.getElementById('reset-btn');
+    const resetButton = document.getElementById('reset');
     let currentPlayer = 'X';
     let gameBoard = ['', '', '', '', '', '', '', '', ''];
     let gameActive = true;
